@@ -3,7 +3,7 @@ server:
 
 feign:
   hystrix:
-    enabled: false
+    enabled: true
 
 val.url: http://VAL:8090
 #val.url: http://localhost:8090
