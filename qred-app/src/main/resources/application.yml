@@ -3,9 +3,12 @@ server:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
-val.url: http://localhost:8090
+val.url: http://VAL:8090
+#val.url: http://localhost:8090
+
+blackList.count: 2
 
 logging:
   level:
