@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+feign:
+  hystrix:
+    enabled: true
+
+val.url: http://localhost:8090
+
+logging:
+  level:
+    com.qred.service.ValidationResource: FULL
