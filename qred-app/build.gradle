@@ -22,8 +22,6 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.palantir.docker'
 // end::plugin[]
 
-// This is used as the docker image prefix (org)
-group = 'springio'
 
 bootJar {
     baseName = 'qred-app'
@@ -37,7 +35,7 @@ task unpack(type: Copy) {
     into("build/dependency")
 }
 docker {
-    name "${project.group}/${bootJar.baseName}"
+    name "${bootJar.baseName}"
     copySpec.from(tasks.unpack.outputs).into("dependency")
     buildArgs(['DEPENDENCY': "dependency"])
 }
